@@ -10,7 +10,6 @@ if [ ! -f "meta/config.txt" ]; then
     echo $old_user > meta/config.txt
     echo "Stored old config settings in '/meta/config.txt'"
 
-
     # set new config user to pwd
     arduino-cli config set directories.user `pwd`
     echo "Set new config settings to '`pwd`'."
