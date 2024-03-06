@@ -12,6 +12,8 @@ class Wheel {
 public:
     void init(int enA_, int in1_, int in2_);
     void moveSpeed(int speed);
+    void stop();
+    void setSpeed(int newSpeed);
 
     // maybe add acceleration and deceleration function
     // accelerate(newSpeed, time) or int maxSpeedStep
