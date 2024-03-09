@@ -21,13 +21,15 @@ param: speed (the designated speed of the wheel)
     // Serial.print(speed);
     //analogWrite(enA, abs(speed));
     if (speed >= 0) {
+        // Clockwise
         digitalWrite(in1, HIGH);
         digitalWrite(in2, LOW);
     } else {
+        // Counterclockwise
         digitalWrite(in1, LOW);
         digitalWrite(in2, HIGH);
     }
-    analogWrite(enA, abs(speed));
+    analogWrite(enA, speed);
     // analogWrite(enA, abs(speed));
     // if (speed >= 0)
     // {

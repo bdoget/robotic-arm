@@ -10,6 +10,8 @@ class Chassis{
     void moveBackward(int speed);
     void moveLeft(int speed);
     void moveRight(int speed);
+    void turnRight(int speed);
+    void turnLeft(int speed);
     int getWheelSpeed();
     void setWheelSpeed(int newSpeed);
     void stop();
