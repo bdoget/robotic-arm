@@ -17,7 +17,7 @@ int Chassis::getWheelSpeed(){
 
 void Chassis::setWheelSpeed(int newSpeed){
 // sets the current speed to all wheels
-    if (newSpeed < 0){newSpeed = 0;}
+    if (newSpeed < 0){newSpeed *= -1;}
     topRight.setSpeed(newSpeed);
     topLeft.setSpeed(newSpeed);
     bottomLeft.setSpeed(newSpeed);
