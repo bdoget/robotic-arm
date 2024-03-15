@@ -4,8 +4,8 @@
 class Arm {
     public:
         void init(int pinOne, int pinTwo, int pinThree);
-        void moveForward(int currentpos, int targetpos);
-        void moveBackward(int currentpos, int targetpos);
+        void servoMoveForward(int currentpos, int targetpos);
+        void servoMoveBackward(int currentpos, int targetpos);
     
 
     private:
