@@ -3,23 +3,30 @@
 
 // --------
 
-void Arm::init(int pinOne)
-{
-    pinOne = pinOne;
 
+Arm::Arm(int pin1, int pin2, int pin3){
+    Servo1.attach(pin1);
+    Servo2.attach(pin2);
+    Servo3.attach(pin3);
 }
 
-
-// Below, we need current pos of each servo stored elsewhere, then passed
-// into functions below, the target pos will be returned. 
-
-float Arm::servoMoveForward(float targetpos)
-{
-    servoBase.write(targetpos)
-    // wait 15 ms for servo to reach the position
-    delay(15); // Wait for 15 millisecond(s)
-    return targetpos
+void Arm::moveServo1(int angle){
+    // ELBOW
+    Servo1.write(angle)
+    // write functionality to make this move slower
+   
 }
  
+void Arm::moveServo2(int angle){
+    // WRIST
+    Servo2.write(angle)
+    // write functionality to make this move faster
+   
+}
 
-
+void Arm::moveServo3(int angle){
+    // CLAW
+    Servo3.write(angle)
+    // write functionality to make this move faster/slower
+   
+}
