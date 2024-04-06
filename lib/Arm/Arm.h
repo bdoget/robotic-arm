@@ -19,11 +19,10 @@ class Arm {
             Servo2.attach(pin2);
             Servo3.attach(pin3);        
         }
-        void moveServo1;
-        void moveServo2;
-        void moveServo3;
+        void moveServo1(int angle);
+        void moveServo2(int angle);
+        void moveServo3(int angle);
     
-
     private:
         Servo Servo1;
         Servo Servo2;
@@ -31,5 +30,5 @@ class Arm {
     
 };
 
-
+#endif
 

@@ -12,21 +12,15 @@ Arm::Arm(int pin1, int pin2, int pin3){
 
 void Arm::moveServo1(int angle){
     // ELBOW
-    Servo1.write(angle)
-    // write functionality to make this move slower
-   
+    Servo1.write(angle);
 }
  
 void Arm::moveServo2(int angle){
     // WRIST
-    Servo2.write(angle)
-    // write functionality to make this move faster
-   
+    Servo2.write(angle);
 }
 
 void Arm::moveServo3(int angle){
     // CLAW
-    Servo3.write(angle)
-    // write functionality to make this move faster/slower
-   
+    Servo3.write(angle);
 }
