@@ -2,9 +2,6 @@
 #define Arm_H
 #include <Servo.h>
 
-
-
-
 // NEEDED: A call to the arm class that includes the pins of each servo
 //         SERVO 1: elbow
 //         SERVO 2: wrist
@@ -14,11 +11,7 @@
 
 class Arm {
     public:
-        Arm(int pin1, int pin2, int pin3){
-            Servo1.attach(pin1);
-            Servo2.attach(pin2);
-            Servo3.attach(pin3);        
-        }
+        void init(int pin1, int pin2, int pin3);
         void moveServo1(int angle);
         void moveServo2(int angle);
         void moveServo3(int angle);
