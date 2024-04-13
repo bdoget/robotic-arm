@@ -19,19 +19,33 @@ void testRun(int enA, int pin1, int pin2){
   255-0 on enable
   */
  while (true){
+  Serial.println("FEP FEP FEP FEP FEP FEP");
   digitalWrite(pin1, HIGH);
   digitalWrite(pin2, LOW);
-  for (int i = 90; i < 255; i++){
+  for (int i = 90; i <= 255; i++){
     analogWrite(enA, i);
-    delay(100);
-  }
-  digitalWrite(pin1, LOW);
-  digitalWrite(pin2, HIGH);
-  for (int i = 255; i >90; i--){
-    analogWrite(enA, i);
-    delay(100);
+    delay(10);
   }
   delay(500);
+  for (int i = 255; i >=0; i--){
+    analogWrite(enA, i);
+    delay(10);
+  }
+  delay(500);
+  digitalWrite(pin1, LOW);
+  digitalWrite(pin2, HIGH);
+  for (int i = -255; i <=0; i++){
+    analogWrite(enA, abs(i));
+    delay(10);
+  }
+  delay(500);
+  for (int i = -90; i >= -255; i--){
+    analogWrite(enA, abs(i));
+    delay(10);
+  }
+  analogWrite(enA, 0);
+  delay(500);
+
  }
 }
 void setup()
@@ -46,13 +60,11 @@ void setup()
 }
 
 void loop() {
-  Serial.println("FEP FEP FEP FEP FEP FEP");
-  testRun(13, 11, 12);
-  test.moveForward(speed);
+  test.moveForward();
   test.stop();
-  test.turnLeft(speed);
+  test.turnLeft();
   test.stop();
-  test.turnRight(speed);
-  test.moveLeft(speed);
+  test.turnRight();
+  test.moveLeft();
   delay(1000);
 }
