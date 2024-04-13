@@ -6,12 +6,12 @@
 class Chassis{
     public:
     void init(Wheel tR, Wheel tL, Wheel bL, Wheel bR, int speed_);
-    void moveForward(int speed);
-    void moveBackward(int speed);
-    void moveLeft(int speed);
-    void moveRight(int speed);
-    void turnRight(int speed);
-    void turnLeft(int speed);
+    void moveForward();
+    void moveBackward();
+    void moveLeft();
+    void moveRight();
+    void turnRight();
+    void turnLeft();
     int getWheelSpeed();
     void setWheelSpeed(int newSpeed);
     void stop();

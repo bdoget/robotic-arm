@@ -25,75 +25,75 @@ void Chassis::setWheelSpeed(int newSpeed){
 }
 
 
-void Chassis::moveForward(int speed){
+void Chassis::moveForward(){
 /*moves the chassis forward */
 
-    topRight.moveSpeed(speed);
-    topLeft.moveSpeed(speed);
-    bottomRight.moveSpeed(speed);
-    bottomLeft.moveSpeed(speed);
+    topRight.moveSpeed(wheelSpeed);
+    topLeft.moveSpeed(wheelSpeed);
+    bottomRight.moveSpeed(wheelSpeed);
+    bottomLeft.moveSpeed(wheelSpeed);
 
 }
 
 
-void Chassis::moveBackward(int speed){
+void Chassis::moveBackward(){
 /*moves the chassis forward */
 
-    topRight.moveSpeed(-speed);
-    topLeft.moveSpeed(-speed);
-    bottomRight.moveSpeed(-speed);
-    bottomLeft.moveSpeed(-speed);
+    topRight.moveSpeed(-wheelSpeed);
+    topLeft.moveSpeed(-wheelSpeed);
+    bottomRight.moveSpeed(-wheelSpeed);
+    bottomLeft.moveSpeed(-wheelSpeed);
 
 }
 
 
-void Chassis::moveLeft(int speed){
+void Chassis::moveLeft(){
 /*moves the chassis left by adjust the wheels accordingly
 topRight/bottomLeft counter,
 topLeft/bottomRight clockwise*/
 
-    topRight.moveSpeed(-speed);
-    topLeft.moveSpeed(speed);
-    bottomRight.moveSpeed(speed);
-    bottomLeft.moveSpeed(-speed);
+    topRight.moveSpeed(-wheelSpeed);
+    topLeft.moveSpeed(wheelSpeed);
+    bottomRight.moveSpeed(wheelSpeed);
+    bottomLeft.moveSpeed(-wheelSpeed);
 
 }
 
 
-void Chassis::moveRight(int speed){
+void Chassis::moveRight(){
 /*moves the chassis right by adjust the wheels accordingly
 topRight/bottomLeft clockwise,
 topLeft/bottomRight counter
 */
 
-    topRight.moveSpeed(speed);
-    topLeft.moveSpeed(-speed);
-    bottomRight.moveSpeed(-speed);
-    bottomLeft.moveSpeed(speed);
+    topRight.moveSpeed(wheelSpeed);
+    topLeft.moveSpeed(-wheelSpeed);
+    bottomRight.moveSpeed(-wheelSpeed);
+    bottomLeft.moveSpeed(wheelSpeed);
 }
 
 
-void Chassis::turnRight(int speed){
+void Chassis::turnRight(){
 /*moves the chassis right by adjust the wheels accordingly
 right wheels will move forward,
 left wheel will move in reverse*/
 
-    topRight.moveSpeed(speed);
-    topLeft.moveSpeed(-speed);
-    bottomRight.moveSpeed(speed);
-    bottomLeft.moveSpeed(-speed);
+    topRight.moveSpeed(wheelSpeed);
+    topLeft.moveSpeed(-wheelSpeed);
+    bottomRight.moveSpeed(wheelSpeed);
+    bottomLeft.moveSpeed(-wheelSpeed);
 }
 
 
-void Chassis::turnLeft(int speed){
+void Chassis::turnLeft(){
 /*moves the chassis right by adjust the wheels accordingly
 right wheels will move in reverse,
 left wheel will move forward*/
 
-    topRight.moveSpeed(-speed);
-    topLeft.moveSpeed(speed);
-    bottomRight.moveSpeed(-speed);
-    bottomLeft.moveSpeed(speed);
+    topRight.moveSpeed(-wheelSpeed);
+    topLeft.moveSpeed(wheelSpeed);
+    bottomRight.moveSpeed(-wheelSpeed);
+    bottomLeft.moveSpeed(wheelSpeed);
 }
 
 
