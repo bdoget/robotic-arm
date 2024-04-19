@@ -1,9 +1,6 @@
 #include "Arduino.h"
 #include "Arm.h"
-
 Arm arm;
-
-// Servo servo1;
 
 void setup()
 {
@@ -14,10 +11,6 @@ void setup()
 }
 
 void loop() {
-  //arm.moveServo(0,0);
-  //delay(1000);
-  //arm.moveServo(0,85);
-  //delay(1000);
 
   for (int i=0; i < 1; i++) {
 
@@ -25,16 +18,6 @@ void loop() {
     delay(1000);
     arm.moveServo(0,75);
     delay(1000);
-
-    //arm.moveServo(1,90);
-    //delay(1000);
-
-    //arm.moveServo(2,90);
-    //delay(1000);
-    //arm.moveServo(3,0);
-    //delay(1000);
-
-
     
   }
   Serial.println("looped Done");
