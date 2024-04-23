@@ -1,42 +1,25 @@
 #include "Arduino.h"
-#include "Servo.h"
+#include "Arm.h"
+Arm arm;
 
-Servo servo1;
-Servo servo2;
-Servo servo3;
-Servo servo4;
-
-void setup() {
-  servo1.attach(A5); // claw
-  servo2.attach(A1); // shoulder
-  servo3.attach(A3); // wrist
-  servo4.attach(A2); // elbow
-
+void setup()
+{
   Serial.begin(9600);
-  Serial.print("Done Setup");
-}
-
-void writeAll(int num){
-  servo1.write(num);
-  servo2.write(num);
-  servo3.write(num);
-  servo4.write(num);
-  Serial.print("Go to num: ");
-  Serial.println(num);
-  delay(2000);
-}
-
-void gotoRest() {
-  servo1.write(0);
-  servo2.write(0);
-  servo3.write(90);
-  servo4.write(0);
+  Serial.println("Done with setup");
+  arm.init(A0,A1,A2,A3); // place pins in order of this: elbow, wrist, claw 
+  delay(1000);
 }
 
 void loop() {
-  // writeAll(45);
-  // writeAll(135);
-  writeAll(0);
-  writeAll(45);
-  writeAll(90);
+
+  for (int i=0; i < 1; i++) {
+
+    arm.moveServo(0,0);
+    delay(1000);
+    arm.moveServo(0,75);
+    delay(1000);
+    
+  }
+  Serial.println("looped Done");
+  delay(1000);
 }
