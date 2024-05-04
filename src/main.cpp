@@ -51,10 +51,10 @@ void testRun(int enA, int pin1, int pin2){
 void setup()
 {
   speed = 150;
-  topRight.init(4,2,3);
-  topLeft.init(7,5,6);
-  bottomLeft.init(10,8,9);
-  bottomRight.init(13,11,12);
+  topRight.init(3, 29, 28);
+  topLeft.init(2, 27, 26);
+  bottomLeft.init(4, 22, 23);
+  bottomRight.init(5, 24, 25);
   test.init(topRight, topLeft, bottomLeft, bottomRight, speed);
   Serial.begin(9600);
 }
