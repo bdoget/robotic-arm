@@ -50,23 +50,33 @@ void testRun(int enA, int pin1, int pin2){
 }
 void setup()
 {
-  speed = 150;
-  topRight.init(3, 29, 28);
+  speed = 255;
+  topRight.init(3, 28, 29);
   topLeft.init(2, 27, 26);
-  bottomLeft.init(4, 22, 23);
-  bottomRight.init(5, 24, 25);
+  bottomLeft.init(4, 22, 23); // 
+  bottomRight.init(5, 25, 24);
   test.init(topRight, topLeft, bottomLeft, bottomRight, speed);
   Serial.begin(9600);
+  Serial.println("Hi buddies");
 }
 
 void loop() {
-  test.moveForward();
-  test.stop();
-  test.turnLeft();
-  test.stop();
-  test.turnRight();
+  // test.moveForward();
   test.moveLeft();
+  delay(2000);
+
+  test.stop();
+  delay(2000);
+
+  // test.moveBackward();
+  test.moveRight();
+  delay(2000);
+
+  test.stop();
   delay(1000);
+  
+  Serial.println("FEPP)");
+
 }
 
 

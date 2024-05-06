@@ -29,7 +29,7 @@ param: speed (the designated speed of the wheel)
         digitalWrite(in1, LOW);
         digitalWrite(in2, HIGH);
     }
-    analogWrite(enA, speed);
+    analogWrite(enA, abs(speed));
     // analogWrite(enA, abs(speed));
     // if (speed >= 0)
     // {

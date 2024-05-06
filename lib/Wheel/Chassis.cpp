@@ -47,7 +47,7 @@ void Chassis::moveBackward(){
 }
 
 
-void Chassis::moveLeft(){
+void Chassis::moveRight(){
 /*moves the chassis left by adjust the wheels accordingly
 topRight/bottomLeft counter,
 topLeft/bottomRight clockwise*/
@@ -60,7 +60,7 @@ topLeft/bottomRight clockwise*/
 }
 
 
-void Chassis::moveRight(){
+void Chassis::moveLeft(){
 /*moves the chassis right by adjust the wheels accordingly
 topRight/bottomLeft clockwise,
 topLeft/bottomRight counter
