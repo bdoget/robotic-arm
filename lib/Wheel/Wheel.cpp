@@ -19,7 +19,6 @@ param: speed (the designated speed of the wheel)
 */
 {
     // Serial.print(speed);
-    //analogWrite(enA, abs(speed));
     if (speed >= 0) {
         // Clockwise
         digitalWrite(in1, HIGH);
@@ -30,17 +29,6 @@ param: speed (the designated speed of the wheel)
         digitalWrite(in2, HIGH);
     }
     analogWrite(enA, abs(speed));
-    // analogWrite(enA, abs(speed));
-    // if (speed >= 0)
-    // {
-    //     analogWrite(in1, abs(speed));
-    //     digitalWrite(in2, LOW);
-    // }
-    // else
-    // {
-    //     digitalWrite(in1, LOW);
-    //     analogWrite(in2, abs(speed));
-    // }
 }
 
 void Wheel::setSpeed(int newSpeed){
