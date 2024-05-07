@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "test-tests.h"
+#include "test-arm.h"
 
 void setup() {
   test_setup();
