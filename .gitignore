@@ -4,3 +4,7 @@
 .vscode/launch.json
 .vscode/ipch
 .vscode/settings.json
+.pio/build/project.checksum
+.pio/libdeps/uno/integrity.dat
+.vscode/extensions.json
+.vscode/launch.json
