@@ -78,7 +78,75 @@ void test_loop() {
   delay(1000);
   
   Serial.println("FEPP)");
+}
+
+void test_basic_movements(){
+  test.moveForward();
+  test.stop();
+  delay(2000);
+
+  test.moveBackward();
+  test.stop();
+  delay(2000);
+
+  test.moveLeft();
+  test.stop();
+  delay(2000);
+
+  test.moveRight();
+  test.stop();
+  delay(2000);
+}
+
+
+void test_turning(){
+  for (int i = 0; i < 3; i++){
+    test.turnRight();
+    delay(1000);
+    test.moveForward();
+    delay(2000);
+  }
+
+  for (int i = 0; i < 3; i++){
+    test.turnLeft();
+    delay(1000);
+    test.moveForward();
+    delay(2000);
+  }
 
 }
+
+
+void test_turning_reverse(){
+  for (int i = 0; i < 3; i++){
+    test.turnRight();
+    delay(1000);
+    test.moveBackward();
+    delay(2000);
+  }
+
+  for (int i = 0; i < 3; i++){
+    test.turnLeft();
+    delay(1000);
+    test.moveBackward();
+    delay(2000);
+  }
+}
+
+
+void test_turn_in_place(){
+  for (int i = 0; i < 4; i++){
+    for (int j = 0; j <= 3; j++){
+      test.turnLeft();
+      delay(1000);
+    }
+    for (int k = 0; k <= 3; k++){
+      test.turnRight();
+      delay(1000);
+    }
+  }
+}
+
+
 
 #endif
