@@ -5,5 +5,5 @@ framework = arduino
 
 [env:uno]
 platform = atmelavr
-board = mega
+board = uno
 framework = arduino
