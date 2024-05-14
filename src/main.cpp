@@ -6,5 +6,5 @@ void setup() {
 }
 
 void loop() {
-  test_loop();
+  test_claw();
 }
