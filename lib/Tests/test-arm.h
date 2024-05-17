@@ -9,7 +9,7 @@ void test_setup()
 {
   Serial.begin(9600);
   Serial.println("Done with setup");
-  arm.init(A1,A2,A3,A4); // place pins in order of this: shoulder,elbow, wrist, claw 
+  arm.init(A3,A2,A1,A4); // place pins in order of this: shoulder,elbow, wrist, claw 
   delay(1000);
 }
 
@@ -17,7 +17,10 @@ void test_loop() {
 
   // for (int i=0; i < 4; i++) {}
   arm.gotoRest();
-  delay(1000);
+  delay(2000);
+  arm.goDown();
+  delay(2000);
+
 
   // arm.moveServo(0 ,0);
   // delay(1000);

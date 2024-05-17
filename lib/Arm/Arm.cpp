@@ -6,7 +6,7 @@
 
 
 void Arm::init(int pin1, int pin2, int pin3, int pin4){
-
+// place pins in order of this: shoulder,elbow, wrist, claw 
     servos[0].attach(pin1);
     servos[1].attach(pin2);
     servos[2].attach(pin3);
@@ -34,11 +34,17 @@ void Arm::moveServo(int servoNum, int angle){
 }
 
 void Arm::gotoRest() {
+    moveServo(0,130);
+    moveServo(1 ,0);
+    moveServo(2, 40);
+    // moveServo(3, 90);
+}
+
+void Arm::goDown() {
     moveServo(0,90);
     moveServo(1 ,90);
     moveServo(2, 90);
     moveServo(3, 90);
-
 }
 
 
