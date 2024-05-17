@@ -17,9 +17,12 @@ void test_loop() {
 
   // for (int i=0; i < 4; i++) {}
   arm.gotoRest();
-  delay(2000);
+  delay(3000);
   arm.goDown();
-  delay(2000);
+  // arm.moveServo(1,30);
+  delay(3000);
+  // arm.moveServo(1,120);
+  // delay(3000);
 
 
   // arm.moveServo(0 ,0);
