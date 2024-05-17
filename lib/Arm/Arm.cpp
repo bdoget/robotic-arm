@@ -1,5 +1,6 @@
 #include "Arduino.h"
 #include "Arm.h"
+#include <Servo.h>
 
 // --------
 
@@ -32,12 +33,12 @@ void Arm::moveServo(int servoNum, int angle){
     }
 }
 
-//void Arm:gotoRest() {
-    //moveServo(0,90);
-    //moveServo(1 ,90);
-    //moveServo(2, 90);
-    //moveServo(3, 90);
+void Arm::gotoRest() {
+    moveServo(0,90);
+    moveServo(1 ,90);
+    moveServo(2, 90);
+    moveServo(3, 90);
 
-//}
+}
 
 

@@ -20,6 +20,7 @@ class Arm {
     public:
         void init(int pin1, int pin2, int pin3, int pin4);
         void moveServo(int servoNum, int angle);
+        void gotoRest();
 
     private:
         Servo servos[4];
