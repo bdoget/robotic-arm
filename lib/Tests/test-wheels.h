@@ -12,11 +12,12 @@ Wheel bottomRight;
 Chassis test;
 
 void test_setup() {
-  speed = 25;
-  topRight.init(3, 29, 28);
-  topLeft.init(2, 26, 27);
-  bottomLeft.init(4, 22, 23); // 
-  bottomRight.init(5, 25, 24);
+  speed = 100;
+  // wheel pins: (enablePin, inputPin1, inputPin2)
+  topRight.init(A7, 29, 28);
+  topLeft.init(A6, 26, 27);
+  bottomLeft.init(A8, 22, 23); // 
+  bottomRight.init(A9, 25, 24);
   test.init(topRight, topLeft, bottomLeft, bottomRight, speed);
   Serial.begin(9600);
   Serial.println("Hi buddies");
