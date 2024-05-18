@@ -12,7 +12,7 @@ Wheel bottomRight;
 Chassis test;
 
 void test_setup() {
-  speed = 100;
+  speed = 25;
   topRight.init(3, 29, 28);
   topLeft.init(2, 26, 27);
   bottomLeft.init(4, 22, 23); // 
