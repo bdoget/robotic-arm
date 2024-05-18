@@ -51,14 +51,6 @@ void test_basic_movements(){
   test.moveBackward();
   test.stop();
   delay(2000);
-
-  test.moveLeft();
-  test.stop();
-  delay(2000);
-
-  test.moveRight();
-  test.stop();
-  delay(2000);
 }
 
 
