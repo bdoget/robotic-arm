@@ -5,30 +5,32 @@
 #include "Arm.h"
 Arm arm;
 Servo servo;
-// void test_setup()
-// {
-//   Serial.begin(9600);
-//   Serial.println("Done with setup");
-//   arm.init(63,64,65,66); // place pins in order of this: shoulder, elbow, wrist, claw 
-//   delay(1000);
 
-// }
+
+// comment out for non-class testing
 void test_setup()
- {
-   Serial.begin(9600);
-   servo.attach(A12);
+{
+  Serial.begin(9600);
+  Serial.println("Done with setup");
+  arm.init(9,8,7,6); // place pins in order of this: shoulder, elbow, wrist, claw 
+  delay(1000);
 
- }
+}
+// void test_setup()
+//  {
+//    Serial.begin(9600);
+//    servo.attach(A12);
+
+//  }
 
 void test_claw()
 {
-   servo.write(0);
-   delay(1000);
-   servo.write(90);
+  //  servo.write(0);
+  //  delay(1000);
+  //  servo.write(90);
 
-   //Serial.println("Start Loop");
-  //arm.moveServo(0, 0);
-  /*
+  Serial.println("Start Loop");
+  arm.moveServo(3, 0);
   delay(1000);
   arm.moveServo(3, 30);
   delay(1000);
@@ -40,7 +42,80 @@ void test_claw()
   delay(1000);
   arm.moveServo(3, 30);
   delay(1000);
-  */
+  
+  
+
+}
+
+
+void test_wrist()
+{
+  //  servo.write(0);
+  //  delay(1000);
+  //  servo.write(90);
+
+  Serial.println("Start Loop");
+  arm.moveServo(2, 0);
+  delay(1000);
+  arm.moveServo(2, 30);
+  delay(1000);
+  arm.moveServo(2, 60);
+  delay(1000);
+  arm.moveServo(2, 90);
+  delay(1000);
+  arm.moveServo(2, 60);
+  delay(1000);
+  arm.moveServo(2, 30);
+  delay(1000);
+  
+  
+
+}
+
+void test_elbow()
+{
+  //  servo.write(0);
+  //  delay(1000);
+  //  servo.write(90);
+
+  Serial.println("Start Loop");
+  arm.moveServo(1, 0);
+  delay(1000);
+  arm.moveServo(1, 30);
+  delay(1000);
+  arm.moveServo(1, 60);
+  delay(1000);
+  arm.moveServo(1, 90);
+  delay(1000);
+  arm.moveServo(1, 60);
+  delay(1000);
+  arm.moveServo(1, 30);
+  delay(1000);
+  
+  
+
+}
+
+void test_shoulder()
+{
+  //  servo.write(0);
+  //  delay(1000);
+  //  servo.write(90);
+
+  Serial.println("Start Loop");
+  arm.moveServo(0, 0);
+  delay(1000);
+  arm.moveServo(0, 30);
+  delay(1000);
+  arm.moveServo(0, 60);
+  delay(1000);
+  arm.moveServo(0, 90);
+  delay(1000);
+  arm.moveServo(0, 60);
+  delay(1000);
+  arm.moveServo(0, 30);
+  delay(1000);
+  
   
 
 }
@@ -124,6 +199,15 @@ void test_minimum_stay() {
   delay(1000);
 }
 
+
+void test_raise_hand(){
+    arm.moveServo(0, 0);
+    delay(1000);
+    arm.moveServo(1, 90);
+    delay(1000);
+    arm.moveServo(2, 90);
+    delay(1000);
+}
 
 
 
