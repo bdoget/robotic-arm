@@ -1,10 +1,12 @@
 #include <Arduino.h>
-#include "test-arm.h"
+#include "test-wheels.h"
 
 void setup() {
   test_setup();
 }
 
 void loop() {
-  test_claw();
+  test_basic_movements();
+  test_turn_in_place();
+  test_turning();
 }
