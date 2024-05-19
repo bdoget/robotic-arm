@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "test-arm.h"
+#include "test-wheels.h"
 
 void setup() {
   Serial.println("Start with setup");
@@ -8,7 +8,6 @@ void setup() {
 }
 
 void loop() {
-  //test_loop();
-  Serial.println("START LOOP");
+  test_loop();
 }
 

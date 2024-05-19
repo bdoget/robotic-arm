@@ -13,13 +13,13 @@ void Wheel::init(int enA_, int in1_, int in2_)
     // Serial.println(enA);
 }
 
-void Wheel::moveSpeed(int speed)
+void Wheel::moveSpeed(int speedA)
 /* Moves the wheel forward or backward, depending on the speed
 param: speed (the designated speed of the wheel)
 */
 {
-    Serial.println(speed);
-    if (speed >= 0) {
+    // Serial.print(speed);
+    if (speedA >= 0) {
         // Clockwise
         digitalWrite(in1, HIGH);
         digitalWrite(in2, LOW);
@@ -28,7 +28,7 @@ param: speed (the designated speed of the wheel)
         digitalWrite(in1, LOW);
         digitalWrite(in2, HIGH);
     }
-    analogWrite(enA, abs(speed));
+    analogWrite(enA, abs(speedA));
 }
 
 void Wheel::setSpeed(int newSpeed){
