@@ -6,7 +6,5 @@ void setup() {
 }
 
 void loop() {
-  test_basic_movements();
-  test_turn_in_place();
-  test_turning();
+  test_loop();
 }
