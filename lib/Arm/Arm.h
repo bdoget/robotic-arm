@@ -2,11 +2,6 @@
 #define Arm_H
 #include <Servo.h>
 
-/*
-
-
-*/
-
 
 // NEEDED: A call to the arm class that includes the pins of each servo
 
@@ -20,6 +15,8 @@ class Arm {
     public:
         void init(int pin1, int pin2, int pin3, int pin4);
         void moveServo(int servoNum, int angle);
+        void gotoRest();
+        void goDown();
 
     private:
         Servo servos[4];

@@ -12,108 +12,7 @@ void test_setup()
 {
   Serial.begin(9600);
   Serial.println("Done with setup");
-  arm.init(9,8,7,6); // place pins in order of this: shoulder, elbow, wrist, claw 
-  delay(1000);
-
-}
-// void test_setup()
-//  {
-//    Serial.begin(9600);
-//    servo.attach(A12);
-
-//  }
-
-void test_claw()
-{
-  //  servo.write(0);
-  //  delay(1000);
-  //  servo.write(90);
-
-  Serial.println("Start Loop");
-  arm.moveServo(3, 0);
-  delay(1000);
-  arm.moveServo(3, 30);
-  delay(1000);
-  arm.moveServo(3, 60);
-  delay(1000);
-  arm.moveServo(3, 90);
-  delay(1000);
-  arm.moveServo(3, 60);
-  delay(1000);
-  arm.moveServo(3, 30);
-  delay(1000);
-  
-  
-
-}
-
-
-void test_wrist()
-{
-  //  servo.write(0);
-  //  delay(1000);
-  //  servo.write(90);
-
-  Serial.println("Start Loop");
-  arm.moveServo(2, 0);
-  delay(1000);
-  arm.moveServo(2, 30);
-  delay(1000);
-  arm.moveServo(2, 60);
-  delay(1000);
-  arm.moveServo(2, 90);
-  delay(1000);
-  arm.moveServo(2, 60);
-  delay(1000);
-  arm.moveServo(2, 30);
-  delay(1000);
-  
-  
-
-}
-
-void test_elbow()
-{
-  //  servo.write(0);
-  //  delay(1000);
-  //  servo.write(90);
-
-  Serial.println("Start Loop");
-  arm.moveServo(1, 0);
-  delay(1000);
-  arm.moveServo(1, 30);
-  delay(1000);
-  arm.moveServo(1, 60);
-  delay(1000);
-  arm.moveServo(1, 90);
-  delay(1000);
-  arm.moveServo(1, 60);
-  delay(1000);
-  arm.moveServo(1, 30);
-  delay(1000);
-  
-  
-
-}
-
-void test_shoulder()
-{
-  //  servo.write(0);
-  //  delay(1000);
-  //  servo.write(90);
-
-  Serial.println("Start Loop");
-  arm.moveServo(0, 0);
-  delay(1000);
-  arm.moveServo(0, 30);
-  delay(1000);
-  arm.moveServo(0, 60);
-  delay(1000);
-  arm.moveServo(0, 90);
-  delay(1000);
-  arm.moveServo(0, 60);
-  delay(1000);
-  arm.moveServo(0, 30);
+  arm.init(A3,A2,A1,A4); // place pins in order of this: shoulder,elbow, wrist, claw 
   delay(1000);
   
   
@@ -121,17 +20,22 @@ void test_shoulder()
 }
 
 void test_loop() {
-  // EVERYTHING TO 0 THEN 75 DEGREES
-  for (int i=0; i < 4; i++) {
 
-    arm.moveServo(0,0);
-    delay(1000);
-    arm.moveServo(0,75);
-    delay(1000);
+  // for (int i=0; i < 4; i++) {}
+  arm.gotoRest();
+  delay(3000);
+  arm.goDown();
+  // arm.moveServo(1,30);
+  delay(3000);
+  // arm.moveServo(1,120);
+  // delay(3000);
 
-  }
-  Serial.println("looped Done");
-  delay(1000);
+
+  // arm.moveServo(0 ,0);
+  // delay(1000);
+  // arm.moveServo(0,90);
+  // Serial.println("looped NEW");
+  // delay(1000);
 }
 
 

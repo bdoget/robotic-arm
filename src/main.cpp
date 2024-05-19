@@ -8,8 +8,6 @@ void setup() {
 }
 
 void loop() {
-  //test_loop();
-  Serial.println("START LOOP");
   test_claw();
 }
 
