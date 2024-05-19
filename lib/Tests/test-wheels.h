@@ -12,12 +12,12 @@ Wheel bottomRight;
 Chassis test;
 
 void test_setup() {
-  speed = 100;
+  speed = 220;
   // wheel pins: (enablePin, inputPin1, inputPin2)
-  topRight.init(A7, 29, 28);
-  topLeft.init(A6, 26, 27);
-  bottomLeft.init(A8, 22, 23); // 
-  bottomRight.init(A9, 25, 24);
+  topRight.init(9, 29, 28);
+  topLeft.init(10, 26, 27);
+  bottomLeft.init(8, 22, 23); // 
+  bottomRight.init(11, 25, 24);
   test.init(topRight, topLeft, bottomLeft, bottomRight, speed);
   Serial.begin(9600);
   Serial.println("Hi buddies");
@@ -39,19 +39,36 @@ void test_loop() {
   // delay(2000);
 
   // test.stop();
+  test.moveForward();
+  Serial.println("Moving Now!");
+  delay(2000);
+  test.stop();
+  Serial.println("Stopping Now!");
+
+  test.moveBackward();
+  Serial.println("Backuop Now!");
+  delay(2000);
+  test.stop();
+  Serial.println("Moving Now!");
+  delay(1000);
   delay(1000);
   
-  Serial.println("FEPP)");
+  
 }
 
 void test_basic_movements(){
   test.moveForward();
-  test.stop();
+  Serial.println("Moving Now!");
   delay(2000);
+  test.stop();
+  Serial.println("Stopping Now!");
 
   test.moveBackward();
-  test.stop();
+  Serial.println("Backuop Now!");
   delay(2000);
+  test.stop();
+  Serial.println("Moving Now!");
+  delay(1000);
 }
 
 
