@@ -18,7 +18,7 @@ void Wheel::moveSpeed(int speed)
 param: speed (the designated speed of the wheel)
 */
 {
-    // Serial.print(speed);
+    Serial.println(speed);
     if (speed >= 0) {
         // Clockwise
         digitalWrite(in1, HIGH);
