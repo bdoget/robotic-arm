@@ -17,11 +17,21 @@ class Arm {
         void moveServo(int servoNum, int angle);
         void gotoRest();
         void goDown();
+        int lerp(int start, int stop, float time);
+        void step(int dir);
+        void setSpeed(float dt);
 
     private:
         Servo servos[4];
         int mins[4];
-        int maxs[4];
+        int maxs[4]; 
+
+        int phase = 0;
+        float time = 0;
+        float dt = 0;
+
+        int rest[3] = {90,120,90};
+        int down[3] = {130,0,40};
     
 };
 
