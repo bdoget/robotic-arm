@@ -29,6 +29,7 @@ class Transciever {
         void initReciever(int cepin, int cspin);
         void initTransmitter(int cepin, int cspin);
         void sendData(Data_Package data);
+        
         void deleteAll();
 
     private:
