@@ -58,7 +58,7 @@ void Arm::step(int dir) {
     int down[3] = {130,0,40};
 
 
-    if (time > 1-dt*dir)
+    if (time+dt*dir > 1 || time+dt*dir < 0) 
         return;
     time += dt*dir;
 
@@ -66,7 +66,7 @@ void Arm::step(int dir) {
         int end = lerp(rest[i],down[i],time);
         servos[i].write(end);
     }
-    
+
 }
 
 void Arm::setSpeed(float dtA) {

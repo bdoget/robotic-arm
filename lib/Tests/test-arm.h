@@ -4,29 +4,26 @@
 #include "Arduino.h"
 #include "Arm.h"
 Arm arm;
-Servo servo;
 
-
-// comment out for non-class testing
-void test_setup()
-{
+void test_setup() {
   Serial.begin(9600);
   Serial.println("Done with setup");
   arm.init(A3,A2,A1,A4); // place pins in order of this: shoulder,elbow, wrist, claw 
   delay(1000);
-  
-  
-
 }
 
 void test_loop() {
+  arm.goDown();
+  delay(2000);
+  arm.gotoRest();
+  delay(2000);
 
   // for (int i=0; i < 4; i++) {}
-  arm.gotoRest();
-  delay(3000);
-  arm.goDown();
-  // arm.moveServo(1,30);
-  delay(3000);
+  // arm.gotoRest();
+  // delay(3000);
+  // arm.goDown();
+  // // arm.moveServo(1,30);
+  // delay(3000);
   // arm.moveServo(1,120);
   // delay(3000);
 

@@ -3,7 +3,6 @@
 
 #include <Arduino.h>
 #include "Chassis.h"
-
 int speed;
 Wheel topRight;
 Wheel topLeft;
@@ -12,12 +11,13 @@ Wheel bottomRight;
 Chassis test;
 
 void test_setup() {
-  speed = 100;
+  speed = 255;
   // wheel pins: (enablePin, inputPin1, inputPin2)
-  topRight.init(A7, 29, 28);
-  topLeft.init(A6, 26, 27);
-  bottomLeft.init(A8, 22, 23); // 
-  bottomRight.init(A9, 25, 24);
+  topRight.init(8, 23, 22); //
+  topLeft.init(11, 25, 24); //
+  bottomLeft.init(9, 28, 29); // 
+  bottomRight.init(10, 26, 27); //
+   
   test.init(topRight, topLeft, bottomLeft, bottomRight, speed);
   Serial.begin(9600);
   Serial.println("Hi buddies");
